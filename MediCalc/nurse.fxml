@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller" styleClass="bc" stylesheets="style/style.css">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #62a0e3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="200.0" layoutX="64.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/medi.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="241.0" layoutY="32.0" text="MEDICALC">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ButtonBar layoutX="-12.0" layoutY="100.0" prefHeight="70.0" prefWidth="1200.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="12.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#dashboard" prefHeight="42.0" text="Home">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button minWidth="0.0" mnemonicParsing="false" onAction="#clerkLogin" prefHeight="42.0" prefWidth="462.0" text="Cleark">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#doctorLogin" prefHeight="42.0" text="Doctor">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="42.0" text="Nurse">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#adminLogin" prefHeight="42.0" text="Admin">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <HBox alignment="CENTER" layoutX="100.0" layoutY="272.0" prefHeight="500.0" prefWidth="1000.0" spacing="20.0" style="-fx-background-radius: 10PX;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #d4d5d6; -fx-background-radius: 20px;">
+               <children>
+                  <Label layoutX="48.0" layoutY="106.0" prefHeight="30.0" prefWidth="103.0" text="PATIENT ID : ">
+                     <font>
+                        <Font name="Amiri Bold Slanted" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="173.0" prefHeight="30.0" prefWidth="122.0" text="PATIENT NAME : ">
+                     <font>
+                        <Font name="Amiri Bold Slanted" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="239.0" prefHeight="30.0" prefWidth="103.0" text="PATIENT DOB : ">
+                     <font>
+                        <Font name="Amiri Bold Slanted" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="305.0" prefHeight="30.0" prefWidth="141.0" text="PATIENT SEX : ">
+                     <font>
+                        <Font name="Amiri Bold Slanted" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nursePatientId" layoutX="236.0" layoutY="106.0" prefHeight="30.0" prefWidth="252.0" text="NONE" />
+                  <Label fx:id="nursePatientName" layoutX="236.0" layoutY="173.0" prefHeight="30.0" prefWidth="252.0" text="NONE" />
+                  <Label fx:id="nursePatientDob" layoutX="236.0" layoutY="239.0" prefHeight="30.0" prefWidth="252.0" text="NONE" />
+                  <Label fx:id="nursePatientSex" layoutX="236.0" layoutY="305.0" prefHeight="30.0" prefWidth="252.0" text="NONE" />
+                  <Label alignment="CENTER" layoutX="119.0" layoutY="29.0" prefHeight="44.0" prefWidth="206.0" text="DETAILS">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 20px;">
+               <children>
+                  <TextField fx:id="roomIdNurse" alignment="CENTER" layoutX="58.0" layoutY="164.0" prefHeight="44.0" prefWidth="383.0" promptText="ROOM ID" style="-fx-alignment: center; -fx-background-radius: 5px;" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="59.0" />
+                  <TextField fx:id="bedNumberNurse" alignment="CENTER" layoutX="58.0" layoutY="277.0" prefHeight="44.0" prefWidth="383.0" promptText="BED NUMBER" style="-fx-alignment: center; -fx-background-radius: 5px;" />
+                  <Button styleClass="buttonChange" onAction="#admitPatient" layoutX="99.0" layoutY="406.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="ADMIT">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="70.0" layoutY="26.0" prefHeight="44.0" prefWidth="360.0" text="ROOM ALLOCATION">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button styleClass="buttonChange" onAction="#dischargePatient" layoutX="270.0" layoutY="405.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="DISCHARGE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="259.0" layoutY="193.0" maxWidth="900.0" prefHeight="44.0" prefWidth="764.0" AnchorPane.leftAnchor="259.0" AnchorPane.rightAnchor="177.0">
+         <children>
+            <TextField fx:id="getPatientIdSearch" alignment="CENTER" prefHeight="44.0" prefWidth="638.0" promptText="ENTER PATIENT ID" />
+            <Button styleClass="buttonChange" onAction="#searchPatientNurse" mnemonicParsing="false" prefHeight="42.0" prefWidth="146.0" text="SEARCH">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+.bc{
+    -fx-background-image: url("images/clinin.jpg");
+    -fx-background-size:cover;
+    -fx-background-repeat: stretch;
+    -fx-z-index:-1;
+}
+.buttonChange{
+    -fx-background-color: #e6e8eb;
+    -fx-background-radius:10px;
+}
+.buttonChange:hover{
+    -fx-background-color: #81ace6;
+    -fx-background-radius:20px;
+    -fx-border-color:#2a66bf;
+    -fx-border-radius:20px;
+}
+
+.buttonChange:focus{
+    -fx-background-color: #81ace6;
+    -fx-background-radius:20px;
+    -fx-border-color:#2a66bf;
+    -fx-border-radius:20px;
+}
+.buttonChange:pressed{
+    -fx-background-color:#408fde;
+    -fx-background-radius:25px;
+    -fx-border-color:#1b437d;
+    -fx-border-radius:25px;
+}
+

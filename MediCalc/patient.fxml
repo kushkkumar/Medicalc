@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller" styleClass="bc" stylesheets="style/style.css">
+   <children>
+      <Button styleClass="buttonChange" mnemonicParsing="false" onAction="#closeButton" prefHeight="42.0" text="X" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <AnchorPane prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #62a0e3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="200.0" layoutX="64.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/medi.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="241.0" layoutY="32.0" text="MEDICALC">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ButtonBar layoutX="-12.0" layoutY="100.0" prefHeight="70.0" prefWidth="1200.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="12.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#dashboard" prefHeight="42.0" text="Home">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button minWidth="0.0" mnemonicParsing="false" onAction="#clerkLogin" prefHeight="42.0" prefWidth="462.0" text="Cleark">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#doctorLogin" prefHeight="42.0" text="Doctor">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button defaultButton="false" onAction="#nurseLogin" mnemonicParsing="false" prefHeight="42.0" text="Nurse">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#adminLogin" prefHeight="42.0" text="Admin">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <AnchorPane layoutX="180.0" layoutY="180.0" prefHeight="601.0" prefWidth="800.0" style=" -fx-background-radius: 30PX;" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="180.0">
+         <children>
+            <Label layoutX="180.0" layoutY="10.0" prefHeight="44.0" text="Patient and Prescription Details">
+               <font>
+                  <Font name="DejaVu Serif Bold Italic" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="100.0" layoutY="272.0" prefHeight="500.0" prefWidth="1300.0" spacing="20.0" style="-fx-background-radius: 10PX;" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <children>
+             <Button styleClass="buttonChange" mnemonicParsing="false" onAction="#patientDetailsFromId" prefHeight="42.0" text="Patient Details From Id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+             <Button styleClass="buttonChange" mnemonicParsing="false" onAction="#patientDetailsFromName" prefHeight="42.0" text="Patient Details From Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+             <Button styleClass="buttonChange" mnemonicParsing="false" onAction="#patientDetailsFromDate" prefHeight="42.0" text="Patient Details From Date">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+             <Button styleClass="buttonChange" mnemonicParsing="false" onAction="#todayPrescription" prefHeight="42.0" text="Today's Prescription">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+             <Button styleClass="buttonChange" mnemonicParsing="false" onAction="#anydayPrescription" prefHeight="42.0" text="Prescription of any day">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

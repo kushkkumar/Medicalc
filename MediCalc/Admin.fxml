@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller" styleClass="bc" stylesheets="style/style.css">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #62a0e3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="200.0" layoutX="58.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/medi.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="41.0" text="MEDICALC">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <GridPane hgap="30.0" layoutX="185.0" layoutY="197.0" prefHeight="569.0" prefWidth="900.0" vgap="30.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="186.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="445.4000305175781" minHeight="10.0" prefHeight="445.4000305175781" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="251.79999389648435" minHeight="10.0" prefHeight="77.39996948242185" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button styleClass="buttonChange" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminAddOrDeleteClerk" prefHeight="471.0" prefWidth="266.0" text="ADD OR &#10;DELETE &#10;CLERKS">
+               <font>
+                  <Font name="Amiri Bold Slanted" size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="images/lo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button styleClass="buttonChange" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminAddOrDeleteDoctor" prefHeight="471.0" prefWidth="275.0" text="ADD OR &#10;DELETE &#10;DOCTOR" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Amiri Bold Slanted" size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="images/l4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button styleClass="buttonChange" contentDisplay="TOP" mnemonicParsing="false" onAction="#manageMedicineAndRoom" prefHeight="471.0" prefWidth="275.0" text="MANAGE &#10;ROOM &amp;&#10;MEDICINE&#10;" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Amiri Bold Slanted" size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="images/manage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="438.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <!-- <TextArea prefHeight="100.0" prefWidth="575.0" promptText="ENTER THR EXTRA QUERIES" GridPane.columnIndex="1" GridPane.rowIndex="1" /> -->
+            
+            <Button styleClass="buttonChange" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminAddOrDeleteNurse" prefHeight="471.0" prefWidth="275.0" text="ADD OR &#10;DELETE &#10;NURSE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Amiri Bold Slanted" size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="images/logo2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+
+
+      
+
+      <ButtonBar layoutX="-14.0" layoutY="110.0" prefHeight="70.0" prefWidth="1200.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#dashboard" prefHeight="42.0" text="Home">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button minWidth="0.0" mnemonicParsing="false" onAction="#clerkLogin" prefHeight="42.0" prefWidth="462.0" text="Cleark">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#doctorLogin" prefHeight="42.0" text="Doctor">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#nurseLogin" prefHeight="42.0" text="Nurse">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="42.0" text="Admin">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

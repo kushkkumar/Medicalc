@@ -1,0 +1,16 @@
+public String getAdminMD5Hash(String s) {
+        String hashText = "0";
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] messageDigest = md.digest(s.getBytes());
+            BigInteger no = new BigInteger(1, messageDigest);
+            hashText = no.toString(36);
+            while(hashText.length() < 25) {
+                hashText += "0";
+            }
+            // return hashText;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return new String(hashText);
+    }

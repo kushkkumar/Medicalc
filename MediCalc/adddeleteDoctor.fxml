@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1366.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller" styleClass="bc" stylesheets="style/style.css">
+   <children>
+      <Button styleClass="buttonChange" mnemonicParsing="false" onAction="#backButton" prefHeight="42.0" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Button>
+      <AnchorPane prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: #62a0e3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="200.0" layoutX="83.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="images/medi.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="267.0" layoutY="50.0" text="MEDICALC">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="100.0" layoutY="197.0" prefHeight="568.0" prefWidth="1000.0" spacing="60.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <fx:define>
+            <ToggleGroup fx:id="groupAddDoctor" />
+         </fx:define>
+         <children>
+            <AnchorPane prefHeight="606.0" prefWidth="666.0" style="-fx-background-color: #d4d5d6; -fx-background-radius: 20px;">
+               <children>
+                  <TextField fx:id="doctorName" alignment="CENTER" layoutX="74.0" layoutY="78.0" prefHeight="44.0" prefWidth="484.0" promptText="DOCTOR NAME" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="55.0" />
+                  <Label alignment="CENTER" layoutX="192.0" layoutY="12.0" prefHeight="44.0" prefWidth="226.0" text="Add Doctor">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="doctorSepc" alignment="CENTER" layoutX="75.0" layoutY="149.0" prefHeight="44.0" prefWidth="484.0" promptText="SPECIALIZATION" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="54.0" />
+                  <TextField fx:id="doctorPhoneNumber" alignment="CENTER" layoutX="74.0" layoutY="222.0" prefHeight="44.0" prefWidth="484.0" promptText="DOCTOR PHONE NUMBER" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="55.0" />
+                  <Button styleClass="buttonChange" onAction="#addDoctorButton" layoutX="203.0" layoutY="484.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="226.0" text="Submit" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="183.39999999999998" />
+                  <TextField fx:id="doctorUserName" alignment="CENTER" layoutX="72.0" layoutY="345.0" prefHeight="44.0" prefWidth="484.0" promptText="USER NAME" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="52.0" />
+                  <TextField fx:id="doctorPassword" alignment="CENTER" layoutX="72.0" layoutY="413.0" prefHeight="44.0" prefWidth="484.0" promptText="PASSWORD" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="52.0" />
+                  <Label layoutX="137.0" layoutY="283.0" prefHeight="35.0" prefWidth="114.0" text="GENDER">
+                     <font>
+                        <Font name="Amiri Bold Slanted" size="20.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="addDoctorMale" layoutX="272.0" layoutY="294.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="79.0" text="MALE" toggleGroup="$groupAddDoctor" />
+                  <RadioButton fx:id="addDoctorFemale" layoutX="367.0" layoutY="294.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="92.0" text="FEMALE" toggleGroup="$groupAddDoctor" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="606.0" prefWidth="390.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 20px;">
+               <children>
+                  <TextField fx:id="doctorIdToDelete" alignment="CENTER" layoutX="57.0" layoutY="388.0" maxWidth="700.0" prefHeight="44.0" prefWidth="260.0" promptText="DOCTOR ID" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="30.19999999999999" />
+                  <Label alignment="CENTER" layoutX="56.0" layoutY="24.0" prefHeight="46.0" prefWidth="260.0" text="Delete Doctor">
+                     <font>
+                        <Font name="DejaVu Serif Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button styleClass="buttonChange" onAction="#deleteDoctorId" layoutX="73.0" layoutY="497.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="226.0" text="Submit" AnchorPane.leftAnchor="72.99999999999997" AnchorPane.rightAnchor="47.79999999999998" />
+                  <Label layoutX="103.0" layoutY="122.0" text="Enter the &#10;Doctor ID &#10;to Delete &#10;Doctor Details " textAlignment="CENTER">
+                     <font>
+                        <Font name="Amiri Bold Slanted" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <ButtonBar layoutX="-8.0" layoutY="118.0" prefHeight="70.0" prefWidth="1200.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="8.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#dashboard" prefHeight="42.0" text="Home">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button minWidth="0.0" mnemonicParsing="false" onAction="#clerkLogin" prefHeight="42.0" prefWidth="462.0" text="Cleark">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#doctorLogin" prefHeight="42.0" text="Doctor">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#nurseLogin" prefHeight="42.0" text="Nurse">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" prefHeight="42.0" text="Admin">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
